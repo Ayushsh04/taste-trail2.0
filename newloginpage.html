@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TasteTrails</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" href="newloginpage.css">
+    <script src="login page.js" defer></script>
+    <!-- FontAwesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <span class="hamburger-btn material-symbols-rounded">menu</span>
+            <a href="#" class="logo">
+                <h2>TasteTrails</h2>
+            </a>
+            <ul class="links">
+                <span class="close-btn material-symbols-rounded">close</span>
+                <li><a href="#" >Home</a></li>
+                <li><a href="#" >About us</a></li>
+                <li><a href="#" >Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="blur-bg-overlay"></div>
+    <div class="container">
+        <div class="signin-signup"> 
+            <div class="signin">
+                <form action="/mysigninaction.js" name="mysigninForm" onsubmit="return validateSiginForm()" method="post" class="sign-in-form">
+                    <h2 class="title">Login</h2>
+                    <div class="input-field" id="userlogin">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" name="fname" placeholder="username" required>
+                        <div class="formerror"></div>
+                    </div>
+                    <div class="input-field" id="userpassword">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" name="fpassword" placeholder="password" required>
+                        <div class="formerror"></div>
+                    </div>
+                    <button type="submit" value="Login" id="btn1">Login</button>
+                </form>
+            </div>
+            <div class="forgot">
+                <form action="/myaction2.js" name="forgotForm" onsubmit="return validateForgotForm()" method="post" class="forgotpassword">
+                    <h2 class="title">Forgot password?</h2>
+                    <div class="forgotPassword">
+                        <div class="input-field" id="Forgotemail">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" name="femail" placeholder="username" required>
+                            <div class="formerror"></div>
+                        </div>
+                        <button type="submit" value="submit" id="btn2">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="signup" id="signup">
+                <form action="# " name="myForm" method="post" class="sign-up-form" id="signUpForm">
+                    <h2 class="title">Sign up</h2>
+                    <div class="input-fieldU" id="name">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" name="fname" placeholder="Name" id="username" onkeyup="isEmpty()" required>
+                        <div class="formerror"></div>
+                    </div>
+                    <div class="input-fieldU" id="age">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" name="fname" placeholder="Age" id="username" onkeyup="isEmpty()" required>
+                        <div class="formerror"></div>
+                    </div>
+                    <div class="input-fieldU" id="email">
+                        <i class="fa-solid fa-at"></i>
+                        <input type="email" name="femail" placeholder="Email" id="useremail" onkeyup="isEmpty()" required>
+                        <div class="formerror"></div>
+                    </div>
+                    <div class="input-fieldU" id="password">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" name="fpass" placeholder="password" id="userpassword" onkeyup="isEmpty()" required>
+                        <br>
+                        <div class="formerror"></div>
+                    </div>
+                    <div class="input-fieldU" id="name">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" name="fname" placeholder="Phone" id="username" onkeyup="isEmpty()" required>
+                        <div class="formerror"></div>
+                    </div>
+                    <button type="submit" value="Signup" onclick="submitFunction()" disabled id="btn">Sign up</button>
+                    <div id="message"></div>    
+                </form>
+            </div>
+        </div>
+        <div class="panels-container">      
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>Already a member of TasteTrails</h3>
+                    <p>Login to share your new recipes and 
+                        find new recipes </p>
+                    <button class="btn" id="sign-in-btn">Sign In</button>
+                </div>
+                
+            </div>
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>Not a member of TasteTrails</h3>
+                    <p>Signin to share your new recipes and 
+                        find new recipes</p>
+                    <button class="btn" id="sign-up-btn">Sign Up</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

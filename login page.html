@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ece3175d47.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="login page.css">
+    <title>Lara Technologies</title>
+</head>
+
+<body>
+<!--     <div class="imglogo">
+        <img src="/Images/download.jpeg" alt="Lara logo">
+    </div> -->
+    <div class="container">
+        <div class="signin-signup"> 
+            <div class="signin">
+                <form action="/mysigninaction.js" name="mysigninForm" onsubmit= "return validateSiginForm()" method="post" class="sign-in-form">
+                    <h2 class="title">Login</h2>
+                    <div class="input-field" id="userlogin">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" name="fname" placeholder="username" required>
+                        <div class="formerror"></div>
+                    </div>
+                    <div class="input-field" id="userpassword">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password"  name="fpassword" placeholder="password" required>
+                        <div class="formerror"></div>
+                        <!-- id="psw" name="psw"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter,
+                     and at least 8 or more characters" -->
+                    </div>
+                    <!-- <input type="submit" value="Login" class="btn"> -->
+                    <button type="submit" value="Login" id="btn1">Login</button>
+                </form>
+            </div>
+            <div class="forgot">
+                <form action="/myaction2.js" name="forgotForm" onsubmit="return validateForgotForm()" method="post" class="forgotpassword">
+                    <h2 class="title">Forgot password?</h2>
+                    <div class="forgotPassword">
+                        <div class="input-field" id="Forgotemail">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" name="femail" placeholder="username" required>
+                            <div class="formerror"></div>
+                        </div>
+                        <!-- <input type="submit" value="submit" class="btn"> -->
+                        <button type="submit" value="submit" id="btn2">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <!-- Here right SingUp form started. -->
+            <div class="signup" id="signup">
+                
+                <form action="# " name="myForm" method="post" class="sign-up-form" id="signUpForm">
+                    <!-- <div id="message"></div> -->
+                    <h2 class="title">Sign up</h2>
+
+                    <div class="input-fieldU" id="name">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" name="fname" placeholder="firstname" id="username" onkeyup="isEmpty()" required>
+                        <div class="formerror"></div>
+                    </div>
+                    <div class="input-fieldU" id="email">
+                        <i class="fa-solid fa-at"></i>
+                        <input type="email" name="femail" placeholder="email" id="useremail" onkeyup="isEmpty()" required>
+                        <div class="formerror"></div>
+                    </div>
+                    <!-- <div class="input-field" id="whatsapp">
+                        <i class="fa-brands fa-whatsapp-square"></i>
+                        <input type="number" name="fwhatsapp" placeholder="Whatsapp" required>
+                        <div class="formerror"></div>
+                    </div> -->
+                    <div class="input-fieldU" id="password">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" name="fpass" placeholder="password"  id="userpassword" onkeyup="isEmpty()" required>
+                        <br>
+                        <div class="formerror"></div>
+                    </div>
+
+                    <!-- <input type="submit" value="Signup" onclick="submitFunction()" id="ab" class="btn"> -->
+                    <button type="submit" value="Signup"  onclick="submitFunction()" disabled id="btn">Sign up</button>
+                    <div id="message"></div>    
+                    <!-- <a href="https://lara.co.in" id="message">Hurrey! Signup success, Please check you inbox to verify email.</a> -->
+                
+
+                </form>
+            </div>
+        </div>
+        <!-- Here Animation panel started -->
+        <div class="panels-container">      
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>Student Of Lara Technology</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.!</p>
+                    <button class="btn" id="sign-in-btn">Sign In</button>
+                </div>
+                <img src="/Images/undraw_programming_re_kg9v.svg" alt="" class="image">
+            </div>
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>New Student Of Lara Technology</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.!</p>
+                    <button class="btn" id="sign-up-btn">Sign Up</button>
+                </div>
+                <img src="/Images/undraw_online_learning_re_qw08.svg" alt="" class="image">
+            </div>
+        </div>
+    </div>
+   
+
+</body>
+<script src="login page.js"></script>
+
+</html>
